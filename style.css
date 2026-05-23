@@ -277,9 +277,37 @@ body.light .typing-input {
   letter-spacing: -0.07em;
 }
 
+.result-highlight {
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  padding: 26px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.32), rgba(34, 211, 238, 0.22));
+  border: 1px solid var(--panel-strong);
+  text-align: center;
+}
+
+.result-highlight span,
+.result-highlight small {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.result-highlight strong {
+  display: block;
+  margin: 8px 0;
+  font-size: clamp(4rem, 16vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.09em;
+}
+
 .result-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-bottom: 24px;
 }

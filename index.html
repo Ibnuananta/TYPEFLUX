@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeFlux — Typing Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <nav class="navbar">
+      <div class="brand">
+        <span class="logo-dot"></span>
+        <span>TypeFlux</span>
+      </div>
+      <button id="themeToggle" class="ghost-btn" aria-label="Toggle theme">theme</button>
+    </nav>
+
+    <section class="hero">
+      <p class="eyebrow">minimal typing test</p>
+      <h1>Train your speed. Keep your style.</h1>
+      <p class="subtitle">A Monkeytype-inspired typing test starter with custom UI, timer modes, live WPM, accuracy, and restart controls.</p>
+    </section>
+
+    <section class="panel settings">
+      <div class="mode-group" aria-label="Time mode">
+        <button class="mode active" data-time="15">15s</button>
+        <button class="mode" data-time="30">30s</button>
+        <button class="mode" data-time="60">60s</button>
+        <button class="mode" data-time="120">120s</button>
+      </div>
+      <button id="restartBtn" class="primary-btn">restart</button>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">time</span>
+        <strong id="timeLeft">30</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">wpm</span>
+        <strong id="wpm">0</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">accuracy</span>
+        <strong id="accuracy">100%</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">chars</span>
+        <strong id="chars">0/0</strong>
+      </div>
+    </section>
+
+    <section class="typing-card">
+      <div id="wordDisplay" class="word-display" aria-label="Typing words"></div>
+      <textarea
+        id="typingInput"
+        class="typing-input"
+        spellcheck="false"
+        autocomplete="off"
+        autocapitalize="off"
+        placeholder="Start typing here..."
+      ></textarea>
+    </section>
+
+    <section id="resultModal" class="result-modal hidden" aria-live="polite">
+      <div class="result-box">
+        <p class="eyebrow">result</p>
+        <h2 id="resultTitle">Nice run.</h2>
+        <div class="result-stats">
+          <div><span>WPM</span><strong id="finalWpm">0</strong></div>
+          <div><span>Accuracy</span><strong id="finalAccuracy">0%</strong></div>
+          <div><span>Correct chars</span><strong id="finalCorrect">0</strong></div>
+        </div>
+        <button id="tryAgainBtn" class="primary-btn">try again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
